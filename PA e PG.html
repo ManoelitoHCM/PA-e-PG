@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+let primeiroTermo = parseInt(prompt("Digite o primeiro termo da progressão."));
+let razao = parseInt(prompt("Digite a razão da progressão."));
+let qtdTermos = parseInt(prompt("Digite a quantidade de termos da progressão."));
+
+i = 0;
+
+let progressao = parseInt(prompt("Digite 1 para realizar uma PA e 2 para realizar uma PG."));
+
+function PA(parametro1, parametro2, parametro3){
+    while(i < parametro3){
+        parametro1 = parametro1 + parametro2;
+        document.write("O termo "+ (i+1) +" da progressão aritmética é: "+ parametro1 + ". <br>");
+        i++;
+    }
+}
+
+function PG(parametro1, parametro2, parametro3){
+    while(i < parametro3){
+        parametro1 = parametro1 * parametro2;
+        document.write("O termo "+ (i+1) +" da progressão geométrica é: "+ parametro1 + ". <br>");
+        i++;
+    }
+}
+
+if(progressao == 1){
+    PA(primeiroTermo, razao, qtdTermos);
+} else {
+    PG(primeiroTermo, razao, qtdTermos);
+}
+
+</script>
